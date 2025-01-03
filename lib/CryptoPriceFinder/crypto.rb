@@ -64,5 +64,17 @@ module CryptoPriceFinder
 		def filecoin(amount)
 			http("fil", "usd", amount)
 		end
+		def bat(amount)
+			http("bat", "usd", amount)
+		end
+		def bnb(amount)
+			http("bnb", "usd", amount)
+		end
+		def bonk(amount)
+			http("bonk", "usd", amount)
+		end
+		def ravencoin(amount)
+			http("rvn", "usd", amount)
+		end
 	end	
 end
