@@ -10,4 +10,5 @@ puts "total:\s#{total}\n"
 
 new_avg = total / count.round(4)
 
+# adds comma to the numbers.
 puts "AVG:\s#{new_avg.to_s.gsub(/\B(?=(...)*\b)/, ',')}"
