@@ -15,3 +15,14 @@ puts "Polkadot:\s"    + CryptoPriceFinder::polkadot(3).to_s
 puts "ChainLink:\s"   + CryptoPriceFinder::chainlink(2).to_s
 puts "Shiba Inu:\s"   + CryptoPriceFinder::shiba_inu(3).to_s
 puts "Filecoin:\s"    + CryptoPriceFinder::filecoin(4).to_s
+puts "UniSwap:\s"     + CryptoPriceFinder::uniswap(44).to_s
+puts "SUI:\s"         + CryptoPriceFinder::sui(3).to_s
+puts "Cardano:\s"     + CryptoPriceFinder::cardano(3333).to_s
+puts "USDC:\s"        + CryptoPriceFinder::usdc(333).to_s
+puts "Fantom:\s"      + CryptoPriceFinder::fantom(332).to_s
+puts "FartCoin:\s"    + CryptoPriceFinder::fartcoin(123).to_s
+puts "Neo:\s"         + CryptoPriceFinder::neo(45).to_s
+puts "FTX Token:\s"   + CryptoPriceFinder::ftx_token(452).to_s
+puts "Flow:\s"        + CryptoPriceFinder::flow(35).to_s
+puts "WorldCoin:\s"   + CryptoPriceFinder::worldcoin(31).to_s
+puts "VeChain:\s"     + CryptoPriceFinder::vechain(4).to_s

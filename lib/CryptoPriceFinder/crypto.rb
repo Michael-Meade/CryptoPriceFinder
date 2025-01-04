@@ -76,5 +76,38 @@ module CryptoPriceFinder
 		def ravencoin(amount)
 			http("rvn", "usd", amount)
 		end
+		def usdc(amount)
+			http("usdc", "usd", amount)
+		end
+		def cardano(amount)
+			http("ada", "usd", amount)
+		end
+		def sui(amount)
+			http("sui", "usd", amount)
+		end
+		def uniswap(amount)
+			http("uni", "usd", amount)
+		end
+		def fantom(amount)
+			http("ftm", "usd", amount)
+		end
+		def fartcoin(amount)
+			http("fartcoin", "usd", amount)
+		end
+		def neo(amount)
+			http("neo", "usd", amount)
+		end
+		def ftx_token(amount)
+			http("ftt", "usd", amount)
+		end
+		def flow(amount)
+			http("flow", "usd", amount)
+		end
+		def worldcoin(amount)
+			http("wld", "usd", amount)
+		end
+		def vechain(amount)
+			http("vet", "usd", amount)
+		end
 	end	
 end
