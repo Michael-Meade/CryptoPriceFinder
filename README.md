@@ -10,7 +10,7 @@ gem install CryptoPriceFinder
 
 ## Usage
 
-This shows the basic usage of the gem. It can get the prices of crypto in USD. 
+This shows the basic usage of the gem. It can get the prices of crypto in USD of over 30 different cryptocurrencies. Examples of usage can also be found in the `exmaples` folder.
 
 ```ruby
 puts "Monero:\s"      + CryptoPriceFinder::monero(6.6).to_s
@@ -60,17 +60,13 @@ usd_xmr = CryptoPriceFinder::monero(xmr)
 btc = 0.103
 usd_btc = CryptoPriceFinder::bitcoin(btc)
 
-
 xlm = 6014
 usd_xlm = CryptoPriceFinder::stellar(xlm)
-
 
 total = usd_xmr + usd_btc + usd_xlm
 xlm_percent = usd_xlm.to_f / total * 100.0
 xmr_percent = usd_xmr.to_f / total * 100.0
 btc_percent = usd_btc.to_f / total * 100.0
-
-
 
 puts "XLM Hodling:\s#{xlm_percent.round(3)}%"
 puts "XMR Hodling:\s#{xmr_percent.round(3)}%"
