@@ -57,7 +57,7 @@ when 6
 when 7
 	puts CryptoPriceFinder::tron(amount)
 when 8
-	puts CryptoPriceFinder::tether(amount)
+		puts CryptoPriceFinder::tether(amount)
 when 9 
 	puts CryptoPriceFinder::solana(amount)
 when 10
