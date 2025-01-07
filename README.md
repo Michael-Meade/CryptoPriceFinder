@@ -73,7 +73,7 @@ puts "XMR Hodling:\s#{xmr_percent.round(3)}%"
 puts "BTC Hodling:\s#{btc_percent.round(3)}%"
 ```
 
-## Check to see if the price is greator than the last price check.
+## Check to see if the price is greater than the last price check.
 
 ```ruby
 require 'CryptoPriceFinder'
