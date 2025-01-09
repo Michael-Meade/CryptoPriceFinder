@@ -100,7 +100,18 @@ else
 	puts "Current Price: #{xmr_price}"
 end
 ```
+## Add commas and round up
 
+```ruby
+require 'CryptoPriceFinder'
+# get the price and round by 2
+
+xmr_price = CryptoPriceFinder::monero(6.7).round(2)
+
+# add a comma to the price
+puts xmr_price.to_s.comma
+
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/CryptoPriceFinder.

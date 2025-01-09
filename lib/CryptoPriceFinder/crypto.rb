@@ -1,6 +1,10 @@
 require 'json'
 require 'httparty'
-
+class String
+	def comma
+		self.to_s.reverse.scan(/(?:\d*\.)?\d{1,3}-?/).join(',').reverse
+	end
+end
 module CryptoPriceFinder
 	class << self
 		URL = "https://duckduckgo.com/js/spice/cryptocurrency/"
@@ -11,6 +15,7 @@ module CryptoPriceFinder
 		def http(crypto, fiat, amount)
 			r = HTTParty.get(File.join(URL, crypto, fiat, amount.to_s)).body
 			r_clean = clean(r)
+			p r_clean
 			json = JSON.parse(r_clean)["data"]["quote"]
 			q = json.keys.shift.to_s
 		json[q]["price"].round(4)

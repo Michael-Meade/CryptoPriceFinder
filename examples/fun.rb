@@ -33,13 +33,16 @@ menu = "
 29) Get price on Flow
 30) Get price on WorldCoin
 31) Get price on Vechain
+32) Parse to find average
 \n"
 
 print(menu)
 print("Enter Number:")
 num = gets.chomp.to_i
-print("Enter amount of Crypto:")
-amount = gets.chomp
+if num.to_i < 32
+	print("Enter amount of Crypto:")
+	amount = gets.chomp
+end
 print("\n\n\n\n")
 case num
 when 1
@@ -104,4 +107,25 @@ when 30
 	puts CryptoPriceFinder::worldcoin(amount)
 when 31
 	puts CryptoPriceFinder::vechain(amount)
+when 32
+	print("Enter the file name you want to parse: ")
+	file_name = gets.chomp
+	total     = 0
+	count     = 0
+	if File.exist?(file_name)
+		File.readlines(file_name).each do |line|
+			price = line.split("\s")[2]
+			total   += price.to_i
+			count += 1
+		end
+		puts "Count:\s#{count}\n"
+		puts "total:\s#{total}\n"
+
+		new_avg = total / count.round(4)
+
+		# adds comma to the numbers.
+		puts "AVG:\s#{new_avg.to_s.gsub(/\B(?=(...)*\b)/, ',')}"
+	else 
+		puts "\n\n\nFile does not exist!"
+	end
 end
