@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'CryptoPriceFinder'
-# get the price and round 2
-
+require './lib/CryptoPriceFinder'
 xmr_price = CryptoPriceFinder.monero(6.7).round(2).to_s
 
 # add a comma to the price

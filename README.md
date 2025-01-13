@@ -109,6 +109,7 @@ require 'CryptoPriceFinder'
 xmr_price = CryptoPriceFinder::monero(6.7).round(2)
 
 # add a comma to the price
+
 puts xmr_price.to_s.comma
 
 ```
